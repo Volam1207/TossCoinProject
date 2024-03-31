@@ -46,7 +46,7 @@ def tung(chon):
     
 
 
-    # Load background music again
+   #phát nhạc
     play_music()
 
 # Hàm hiệu ứng tung đồng xu
@@ -103,14 +103,14 @@ button = tk.Frame(root)
 button.pack(pady=10)
 
 # Nút sấp
-ngua = tk.Button(button, text='Ngửa', bg='Gray', width=10, font=("bold"), command=lambda: tung('Ngửa'))
+ngua = tk.Button(button, text='Ngửa', bg='Gray', width=10, font=("bold"), command= lambda:tung('Ngửa'))
 ngua.pack(side=tk.LEFT, padx=10)
 
 # Nút ngửa
-sap = tk.Button(button, text='Sấp', bg='Gray', width=10, font=("bold"), command=lambda: tung('Sấp'))
+sap = tk.Button(button, text='Sấp', bg='Gray', width=10, font=("bold"), command= lambda:tung('Sấp'))
 sap.pack(side=tk.RIGHT, padx=10)
 
 # Dừng nhạc khi thoát chương trình
-root.protocol("WM_DELETE_WINDOW", lambda: [pygame.mixer.music.stop(), root.destroy()])
+root.protocol("Tắt nhạc", lambda: [pygame.mixer.music.stop(), root.destroy()])
 
 root.mainloop()
